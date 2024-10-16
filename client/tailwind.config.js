@@ -5,8 +5,9 @@ export default {
     extend: {},
     // adding extra properties to container
     container: {
-      padding: "5rem",
-      // padding: "10rem",
+      padding: {
+        md: "10rem",
+      },
     },
   },
   plugins: [],

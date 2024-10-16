@@ -57,7 +57,7 @@ router.post(
         maxAge: 86400000, // 24 hours
       });
 
-      res.status(201).json({ message: "User registered successfully" });
+      res.status(200).json({ message: "User registered successfully" });
       return;
     } catch (error) {
       console.log(error);

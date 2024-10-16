@@ -1,6 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Layout from "./layouts/Layout";
+import Register from "./pages/Register";
 
 const App = () => {
   return (
@@ -14,6 +19,7 @@ const App = () => {
             </Layout>
           }
         />
+
         <Route
           path="/search"
           element={
@@ -22,7 +28,17 @@ const App = () => {
             </Layout>
           }
         />
-        <Route path="*" />
+
+        <Route
+          path="/register"
+          element={
+            <Layout>
+              <Register />
+            </Layout>
+          }
+        />
+
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );
